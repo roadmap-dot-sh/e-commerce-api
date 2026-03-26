@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: e-commerce-api
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecommerce_db
+    username: leviz
+    password: nguyen123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+jwt:
+  secret: your-secret-key-here-must-be-at-least-32-characters-long
+  expiration: 86400000
+
+stripe:
+  api:
+    key: your_stripe_secret_key_here
+
+server:
+  port: 8088
